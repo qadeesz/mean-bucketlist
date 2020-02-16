@@ -27,7 +27,7 @@ export class AddListComponent implements OnInit {
 
   public onSubmit() {
     this.listService.addList(this.newList).subscribe(response => {
-      if (response.success == true) {
+      if (response.success === true) {
         this.addList.emit(this.newList);
         this.resetForm();
       }
