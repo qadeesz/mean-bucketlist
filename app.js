@@ -7,7 +7,10 @@ const config = require("./config/database");
 const bucketlist = require("./controllers/bucketlist");
 
 //Connect mongoose to our database
-mongoose.connect(config.database);
+mongoose.connect(config.database, {
+  useNewUrlParser: true,
+  useUnifiedTopology: true
+});
 
 //Declaring Port
 const port = 3000;
